@@ -4,7 +4,7 @@ export const siteConfig: Metadata = {
   title: "Yogeswaran S | Portfolio",
   description: "Welcome to my portfolio.",
   icons: {
-    icon: "logo.png",
+    icon: "/fav.png",
   },
   keywords: [
     "reactjs",
