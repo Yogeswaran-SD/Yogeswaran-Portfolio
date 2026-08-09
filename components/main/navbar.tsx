@@ -25,7 +25,7 @@ export const Navbar = () => {
       <div className="w-full h-full flex items-center justify-between m-auto px-[10px]">
         {/* Logo + Name */}
         <Link
-          href="#about-me"
+          href="/"
           className="flex items-center"
         >
           <Image
@@ -36,7 +36,7 @@ export const Navbar = () => {
             draggable={false}
             className="cursor-pointer rounded-full"
           />
-          <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300">Yogi</div>
+          <div className="hidden md:block font-bold ml-[10px] text-gray-300">Yogi</div>
         </Link>
 
         {/* Web Navbar */}
@@ -70,6 +70,7 @@ export const Navbar = () => {
 
         {/* Hamburger Menu */}
         <button
+          suppressHydrationWarning
           className="md:hidden text-white focus:outline-none text-4xl"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >

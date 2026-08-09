@@ -92,17 +92,17 @@ export const SOCIALS = [
   {
     name: "Instagram",
     icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/sd_yogi_official/",
   },
   {
     name: "Facebook",
     icon: FaFacebook,
-    link: "https://facebook.com",
+    link: "https://www.facebook.com/profile.php?id=61593091080558",
   },
   {
     name: "Twitter",
     icon: RxTwitterLogo,
-    link: "https://x.com/_sanidhyy",
+    link: "https://x.com/YOGESWARAN1607",
   },
 ] as const;
 
@@ -294,12 +294,12 @@ export const FOOTER_DATA = [
       {
         name: "GitHub",
         icon: RxGithubLogo,
-        link: "https://github.com",
+        link: "https://github.com/Yogeswaran-SD",
       },
       {
         name: "Discord",
         icon: RxDiscordLogo,
-        link: "https://discord.com",
+        link: "https://discord.com/channels/@me",
       },
     ],
   },
@@ -309,17 +309,17 @@ export const FOOTER_DATA = [
       {
         name: "Instagram",
         icon: RxInstagramLogo,
-        link: "https://instagram.com",
+        link: "https://www.instagram.com/sd_yogi_official/",
       },
       {
         name: "Twitter",
         icon: RxTwitterLogo,
-        link: "https://x.com/_sanidhyy",
+        link: "https://x.com/YOGESWARAN1607",
       },
       {
         name: "Linkedin",
         icon: RxLinkedinLogo,
-        link: "https://linkedin.com",
+        link: "https://www.linkedin.com/in/yogeswaran-sd-bb1025358",
       },
     ],
   },
@@ -334,12 +334,12 @@ export const FOOTER_DATA = [
       {
         name: "Learning about me",
         icon: null,
-        link: "https://example.com",
+        link: "https://www.linkedin.com/in/yogeswaran-sd-bb1025358",
       },
       {
         name: "Contact Me",
         icon: null,
-        link: "mailto:contact@example.com",
+        link: "mailto:[EMAIL_ADDRESS]",
       },
     ],
   },
@@ -369,5 +369,5 @@ export const NAV_LINKS = [
 ] as const;
 
 export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio",
+  sourceCode: "https://github.com/Yogeswaran-SD/Yogeswaran-Portfolio.git",
 };

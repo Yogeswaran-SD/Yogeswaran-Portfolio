@@ -43,9 +43,9 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 pt-24 pb-10 w-full z-[20]"
+      className="flex flex-col-reverse lg:flex-row items-center justify-center px-4 sm:px-8 md:px-14 lg:px-20 pt-20 sm:pt-24 pb-8 sm:pb-10 w-full z-[20] gap-6 sm:gap-10 lg:gap-0"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center mt-5 text-start">
+      <div className="h-full w-full flex flex-col gap-5 justify-center mt-5 text-center lg:text-start items-center lg:items-start">
         <motion.div
           variants={slideInFromTop}
           className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
@@ -58,15 +58,15 @@ export const HeroContent = () => {
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-2 mt-6 text-6xl font-bold text-white max-w-[600px]"
+          className="flex flex-col gap-2 mt-6 font-bold text-white w-full max-w-[600px]"
         >
-          <span className="text-4xl font-semibold text-gray-300">HI I&apos;m</span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+          <span className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-300">HI I&apos;m</span>
+          <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
             YOGESWARAN S
           </span>
           {/* Typing animation row — fixed height prevents layout shift */}
           <span
-            className="flex items-center text-3xl font-semibold text-white"
+            className="flex items-center justify-center lg:justify-start text-xl sm:text-2xl md:text-3xl font-semibold text-white"
             style={{ minHeight: "2.5rem" }}
             aria-label={`Role: ${typedRole}`}
             aria-live="polite"
@@ -82,7 +82,7 @@ export const HeroContent = () => {
 
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          className="text-sm sm:text-base md:text-lg text-gray-400 my-5 max-w-[600px]"
         >
           I&apos;m a Full Stack Software Engineer with experience in Website,
           Mobile, and Software development. Check out my projects and skills.
@@ -90,11 +90,11 @@ export const HeroContent = () => {
 
         <motion.div
           variants={slideInFromLeft(1)}
-          className="flex flex-row gap-4"
+          className="flex flex-row gap-4 flex-wrap justify-center lg:justify-start"
         >
           <a
-            href="#about-me"
-            className="py-2 px-8 button-primary text-center text-white cursor-pointer rounded-lg"
+            href="#skills"
+            className="py-2 px-6 sm:px-8 button-primary text-center text-white cursor-pointer rounded-lg text-sm sm:text-base"
           >
             Learn more
           </a>
@@ -102,7 +102,7 @@ export const HeroContent = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="py-2 px-8 border border-[#7042f88b] bg-[#030014]/50 hover:bg-[#7042f8]/80 transition-all duration-300 text-center text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(113,47,255,0.15)] hover:shadow-[0_0_20px_rgba(113,47,255,0.4)]"
+            className="py-2 px-6 sm:px-8 border border-[#7042f88b] bg-[#030014]/50 hover:bg-[#7042f8]/80 transition-all duration-300 text-center text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(113,47,255,0.15)] hover:shadow-[0_0_20px_rgba(113,47,255,0.4)] text-sm sm:text-base"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -123,7 +123,7 @@ export const HeroContent = () => {
           stiffness: 80,
           damping: 14,
         }}
-        className="w-full mt-32 h-full flex justify-center items-center"
+        className="w-full lg:mt-28 h-full flex justify-center items-center"
       >
         {/* Floating image wrapper containing all effects */}
         <motion.div
@@ -148,6 +148,7 @@ export const HeroContent = () => {
             alt="Yogeswaran S - Developer Profile"
             height={450}
             width={450}
+            sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, (max-width: 1024px) 380px, 450px"
             draggable={false}
             className="select-none yogi-img relative z-10"
           />
@@ -155,7 +156,7 @@ export const HeroContent = () => {
       </motion.div>
 
       {/* GPU-accelerated animations */}
-      <style jsx global>{`
+      <style>{`
         @keyframes blink-cursor {
           0%, 100% { opacity: 1; }
           50% { opacity: 0; }
@@ -187,8 +188,8 @@ export const HeroContent = () => {
 
         .yogi-halo-ring {
           position: absolute;
-          width: 400px;
-          height: 400px;
+          width: clamp(260px, 55vw, 420px);
+          height: clamp(260px, 55vw, 420px);
           border-radius: 50%;
           background: radial-gradient(
             ellipse at center,
@@ -205,8 +206,8 @@ export const HeroContent = () => {
 
         .yogi-spin-border {
           position: absolute;
-          width: 370px;
-          height: 370px;
+          width: clamp(240px, 50vw, 390px);
+          height: clamp(240px, 50vw, 390px);
           top: 50%;
           left: 50%;
           border-radius: 25%;
@@ -228,6 +229,38 @@ export const HeroContent = () => {
           height: 100%;
           border-radius: 50%;
           background: #030014;
+        }
+
+        /* Responsive ring sizing via container breakpoints */
+        @media (max-width: 640px) {
+          .yogi-halo-ring {
+            width: 310px;
+            height: 310px;
+          }
+          .yogi-spin-border {
+            width: 290px;
+            height: 290px;
+          }
+        }
+        @media (min-width: 641px) and (max-width: 768px) {
+          .yogi-halo-ring {
+            width: 370px;
+            height: 370px;
+          }
+          .yogi-spin-border {
+            width: 350px;
+            height: 350px;
+          }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .yogi-halo-ring {
+            width: 410px;
+            height: 410px;
+          }
+          .yogi-spin-border {
+            width: 390px;
+            height: 390px;
+          }
         }
 
         .yogi-img-wrapper {

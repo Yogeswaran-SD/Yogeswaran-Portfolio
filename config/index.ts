@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const siteConfig: Metadata = {
   title: "Yogeswaran S | Portfolio",
   description: "Welcome to my portfolio.",
+  icons: {
+    icon: "logo.png",
+  },
   keywords: [
     "reactjs",
     "nextjs",

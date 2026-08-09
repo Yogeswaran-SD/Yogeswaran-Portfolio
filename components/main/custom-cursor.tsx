@@ -76,7 +76,7 @@ export const CustomCursor = () => {
         }}
         animate={{
           scale: isHovering ? 1.5 : 1,
-          backgroundColor: isHovering ? "rgba(113, 47, 255, 0.1)" : "transparent",
+          backgroundColor: isHovering ? "rgba(113, 47, 255, 0.1)" : "rgba(113, 47, 255, 0)",
         }}
         transition={{ duration: 0.15 }}
       />

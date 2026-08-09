@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { RxEnvelopeClosed, RxPerson, RxPencil1 } from "react-icons/rx";
-import { BsCheckCircleFill, BsXCircleFill } from "react-icons/bs";
+import { BsCheckCircleFill, BsXCircleFill, BsTelephone } from "react-icons/bs";
 
 type ToastState = {
   show: boolean;
@@ -15,6 +15,7 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -48,13 +49,14 @@ export const Contact = () => {
         {
           from_name: formData.name,
           from_email: formData.email,
+          phone: formData.phone,
           message: formData.message,
         },
         "aiQu_oppvvYF-ZQI9"
       );
 
       showToast("success", "Message sent successfully! I'll get back to you soon. 🚀");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       console.error(error);
       showToast("error", "Failed to send message. Please try again.");
@@ -103,21 +105,21 @@ export const Contact = () => {
         id="contact"
         className="flex flex-col items-center justify-center py-20 px-5 z-[20] relative w-full"
       >
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0, y: 50 },
-          show: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.8, delay: 0.2 },
-          },
-        }}
-        className="w-full max-w-5xl"
-      >
-        <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 text-center">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            show: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, delay: 0.2 },
+            },
+          }}
+          className="w-full max-w-5xl"
+        >
+        <h1 className="text-2xl sm:text-3xl md:text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 text-center">
           Contact Me
         </h1>
 
@@ -141,6 +143,7 @@ export const Contact = () => {
               <div className="relative flex items-center">
                 <RxPerson className="absolute left-4 text-gray-400 text-xl" />
                 <input
+                  suppressHydrationWarning
                   type="text"
                   id="name"
                   name="name"
@@ -158,6 +161,7 @@ export const Contact = () => {
               <div className="relative flex items-center">
                 <RxEnvelopeClosed className="absolute left-4 text-gray-400 text-xl" />
                 <input
+                  suppressHydrationWarning
                   type="email"
                   id="email"
                   name="email"
@@ -171,10 +175,28 @@ export const Contact = () => {
             </div>
 
             <div className="flex flex-col gap-2">
+              <label htmlFor="phone" className="text-gray-300 font-medium ml-1">Phone Number (Optional)</label>
+              <div className="relative flex items-center">
+                <BsTelephone className="absolute left-4 text-gray-400 text-xl" />
+                <input
+                  suppressHydrationWarning
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Your Phone Number"
+                  className="w-full bg-[#0a0a1a]/80 border border-[#712fff]/20 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
               <label htmlFor="message" className="text-gray-300 font-medium ml-1">Message</label>
               <div className="relative flex">
                 <RxPencil1 className="absolute left-4 top-4 text-gray-400 text-xl" />
                 <textarea
+                  suppressHydrationWarning
                   id="message"
                   name="message"
                   value={formData.message}
@@ -188,6 +210,7 @@ export const Contact = () => {
             </div>
 
             <button
+              suppressHydrationWarning
               type="submit"
               disabled={isSending}
               className="mt-2 flex items-center gap-3 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_20px_rgba(113,47,255,0.4)] transform hover:-translate-y-1 w-full sm:w-auto self-start"
@@ -206,8 +229,8 @@ export const Contact = () => {
             </button>
           </form>
         </div>
-      </motion.div>
-    </section>
+        </motion.div>
+      </section>
     </>
   );
 };
