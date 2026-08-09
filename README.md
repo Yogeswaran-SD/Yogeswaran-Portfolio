@@ -55,17 +55,21 @@ space-portfolio/
     |-- layout.tsx
     |-- page.tsx
   |- components/
+    |-- contentLoad/
     |-- main/
     |-- sub/
+    |-- utils/
+    |-- utilss/
   |- config/
     |-- index.ts
   |- constants/
     |-- index.ts
+  |- hooks/
+    |-- useTypewriter.ts
   |- lib/
     |-- motion.ts
     |-- utils.ts
   |- public/
-  |- .eslintrc.json
   |- .gitignore
   |- eslint.config.mjs
   |- netlify.toml
@@ -117,6 +121,8 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in Space Portfolio.
 
 <!--- DEPENDENCIES_START --->
+- [@emailjs/browser](https://www.npmjs.com/package/@emailjs/browser): ^4.4.1
+- [@eslint/eslintrc](https://www.npmjs.com/package/@eslint/eslintrc): ^3.3.6
 - [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.2.0
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.6.1
@@ -128,10 +134,13 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [eslint](https://www.npmjs.com/package/eslint): ^10.7.0
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.2.12
 - [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.43.0
-- [next](https://www.npmjs.com/package/next): 16.2.12
+- [gsap](https://www.npmjs.com/package/gsap): ^3.15.0
+- [lenis](https://www.npmjs.com/package/lenis): ^1.3.25
+- [next](https://www.npmjs.com/package/next): ^16.2.12
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [react](https://www.npmjs.com/package/react): 19.2.8
 - [react-dom](https://www.npmjs.com/package/react-dom): 19.2.8
+- [react-fast-marquee](https://www.npmjs.com/package/react-fast-marquee): ^1.6.5
 - [react-icons](https://www.npmjs.com/package/react-icons): ^5.7.0
 - [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^10.1.0
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
