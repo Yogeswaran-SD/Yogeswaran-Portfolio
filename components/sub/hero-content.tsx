@@ -99,7 +99,7 @@ export const HeroContent = () => {
             Learn more
           </a>
           <a
-            href="/resume.pdf"
+            href="/yogeswaran_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="py-2 px-6 sm:px-8 border border-[#7042f88b] bg-[#030014]/50 hover:bg-[#7042f8]/80 transition-all duration-300 text-center text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(113,47,255,0.15)] hover:shadow-[0_0_20px_rgba(113,47,255,0.4)] text-sm sm:text-base"

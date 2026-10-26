@@ -279,6 +279,13 @@ export const PROJECTS = [
     image: "/projects/project-3.png",
     link: "https://github.com/Yogeswaran-SD/Upgraded-Offline-RAG.git",
   },
+   {
+    title: "Career Match AI Agent",
+    description:
+      'An AI-powered career guidance platform that analyzes users’ skills, interests, experience, and career goals to recommend suitable job roles and learning paths. It leverages Large Language Models (LLMs) to identify skill gaps, suggest relevant courses, and provide personalized career roadmaps to help users prepare for internships and job opportunities.',
+    image: "/projects/project-33.png",
+    link: "https://github.com/Yogeswaran-SD/Upgraded-Offline-RAG.git",
+  },
  
 ] as const;
 
